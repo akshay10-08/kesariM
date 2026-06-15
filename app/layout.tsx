@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Great_Vibes, Jost } from "next/font/google";
 import "./globals.css";
 
@@ -23,6 +23,12 @@ const jost = Jost({
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 /* ─── SEO Metadata ─── */
 export const metadata: Metadata = {
@@ -141,7 +147,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-ivory text-charcoal font-sans">
+      <body className="min-h-screen flex flex-col bg-ivory text-charcoal font-sans overflow-x-hidden relative w-full">
         {children}
       </body>
     </html>
