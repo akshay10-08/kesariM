@@ -218,7 +218,7 @@ export default function Footer() {
               © {currentYear} {SITE.name}, Kanpur. All rights reserved.
             </p>
             <p className="text-xs text-ivory/50 font-sans tracking-wide">
-              +919580840813 (watsapp/call)
+              Designed by +919580840813 (WhatsApp/Call)
             </p>
           </div>
         </div>
