@@ -7,6 +7,7 @@
 // ═══════════════════════════════════════════
 
 import { useState, useCallback } from 'react';
+import Image from 'next/image';
 import {
   motion,
   useScroll,
@@ -70,26 +71,15 @@ export default function Header() {
         <a
           href="#home"
           onClick={(e) => handleNavClick(e, '#home')}
-          className="flex flex-col leading-none group"
+          className="flex flex-col leading-none group relative w-32 h-12 md:w-40 md:h-16"
         >
-          <span
-            className={`
-              font-serif font-semibold tracking-wide
-              transition-all duration-500
-              ${scrolled ? 'text-xl lg:text-2xl text-ivory' : 'text-2xl lg:text-3xl text-white'}
-            `}
-          >
-            Kesari Mangalam
-          </span>
-          <span
-            className={`
-              font-script text-xs
-              transition-all duration-500
-              ${scrolled ? 'text-gold-light' : 'text-gold'}
-            `}
-          >
-            {SITE.nameHindi}
-          </span>
+          <Image 
+            src="/images/kesari-logo-color.png" 
+            alt="Kesari Mangalam Lawn Logo" 
+            fill 
+            className="object-contain object-left"
+            priority
+          />
         </a>
 
         {/* ── Desktop nav links ── */}
