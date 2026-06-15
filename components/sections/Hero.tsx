@@ -109,17 +109,20 @@ export default function Hero() {
               alt={slide.alt} 
               fill 
               priority={current === 0}
-              className="object-cover" 
+              className="object-cover blur-[3px] scale-105" 
             />
           </div>
 
+          {/* Cinematic Darken */}
+          <div className="absolute inset-0 bg-black/30 z-10" />
+
           {/* Dark radial vignette + bottom-up scrim for legibility */}
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 z-10"
             style={{
               background: `
-                radial-gradient(ellipse at center, rgba(50,20,30,0.45) 0%, transparent 60%),
-                linear-gradient(to top, rgba(110,26,43,0.85) 0%, transparent 40%)
+                radial-gradient(ellipse 60% 50% at center, rgba(40,15,25,0.65) 0%, transparent 65%),
+                linear-gradient(to top, rgba(110,26,43,0.90) 0%, rgba(110,26,43,0.40) 20%, transparent 35%)
               `
             }}
           />
@@ -127,8 +130,8 @@ export default function Hero() {
       </AnimatePresence>
 
       {/* ═══ Content Overlay ═══ */}
-      <div className="relative z-10 flex h-full items-center justify-center pointer-events-none">
-        <div className="w-full px-4 sm:px-6 flex flex-col items-center text-center max-w-[760px] mx-auto">
+      <div className="relative z-20 flex h-full items-center justify-center pointer-events-none">
+        <div className="w-full px-4 sm:px-6 flex flex-col items-center text-center max-w-[720px] mx-auto gap-1">
           
           {/* Logo Crest */}
           <motion.div
@@ -147,7 +150,8 @@ export default function Hero() {
 
           {/* Script Venue Name */}
           <motion.p
-            className="font-script text-5xl md:text-6xl lg:text-7xl font-bold text-gold mb-3 drop-shadow-md"
+            className="font-script text-5xl md:text-6xl lg:text-7xl font-bold text-ivory mb-2"
+            style={{ textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -157,13 +161,20 @@ export default function Hero() {
 
           {/* Hairline Flourish */}
           <motion.div
-            className="flex items-center gap-4 mb-6"
+            className="flex items-center gap-4 mb-4"
             initial={{ opacity: 0, width: 0 }}
             animate={{ opacity: 1, width: 'auto' }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             <div className="w-12 md:w-24 h-px bg-gold/50" />
-            <span className="font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase text-ivory/90 whitespace-nowrap">
+            <span 
+              className="font-sans uppercase text-ivory whitespace-nowrap"
+              style={{ 
+                fontSize: 'clamp(0.95rem, 1.4vw, 1.15rem)', 
+                letterSpacing: '0.22em',
+                textShadow: '0 2px 24px rgba(0,0,0,0.45)'
+              }}
+            >
               The Epitome of Splendour & Regality
             </span>
             <div className="w-12 md:w-24 h-px bg-gold/50" />
@@ -171,18 +182,28 @@ export default function Hero() {
 
           {/* Headline */}
           <motion.h1
-            className="font-serif text-ivory leading-[1.1] mb-6"
-            style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}
+            className="font-serif text-ivory font-normal mb-6"
+            style={{ 
+              fontSize: 'clamp(2.5rem, 5.5vw, 4.25rem)', 
+              lineHeight: 1.1, 
+              letterSpacing: '-0.01em',
+              textShadow: '0 2px 24px rgba(0,0,0,0.45)'
+            }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            Where <span className="italic text-gold">Auspicious</span> Beginnings Take Root.
+            Where <span className="italic text-[#E8B953]" style={{ textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}>Auspicious</span> Beginnings Take Root.
           </motion.h1>
 
-          {/* Eyebrow Stat */}
+          {/* Sub-line */}
           <motion.p
-            className="font-sans text-xs md:text-sm tracking-[0.2em] uppercase text-ivory/80 mb-10"
+            className="font-sans uppercase text-ivory/85 mb-10"
+            style={{ 
+              fontSize: 'clamp(0.8rem, 1.1vw, 0.95rem)', 
+              letterSpacing: '0.2em',
+              textShadow: '0 2px 24px rgba(0,0,0,0.45)'
+            }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.6 }}
