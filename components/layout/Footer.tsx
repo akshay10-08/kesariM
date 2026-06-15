@@ -17,7 +17,7 @@ export default function Footer() {
 
       {/* ── Main footer content ── */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-16 pb-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* ═══ Column 1: Brand Identity ═══ */}
           <div className="space-y-4">
             <h3 className="font-serif text-2xl font-semibold text-ivory">
@@ -177,13 +177,13 @@ export default function Footer() {
           </div>
 
           {/* ═══ Column 4: Embedded Map ═══ */}
-          <div>
+          <div className="lg:col-span-2">
             <h4 className="text-xs uppercase tracking-[0.2em] text-gold font-sans font-medium mb-4">
               Find Us
             </h4>
 
             {/* Google Maps embed */}
-            <div className="aspect-[4/3] overflow-hidden rounded-lg border-2 border-gold/20">
+            <div className="aspect-[16/9] md:aspect-[2/1] lg:aspect-[5/3] overflow-hidden rounded-lg border-2 border-gold/20 shadow-lg">
               <iframe
                 src={CONTACT.googleMapsEmbed}
                 width="100%"
@@ -217,8 +217,8 @@ export default function Footer() {
             <p className="text-xs text-ivory/50">
               © {currentYear} {SITE.name}, Kanpur. All rights reserved.
             </p>
-            <p className="text-xs text-ivory/30 font-serif italic">
-              Crafted with care
+            <p className="text-xs text-ivory/50 font-sans tracking-wide">
+              +919580840813 (watsapp/call)
             </p>
           </div>
         </div>
