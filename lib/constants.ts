@@ -39,25 +39,25 @@ export const CONTACT = {
 
 export const HERO_SLIDES = [
   {
-    image: "/images/hero-1.png",
+    image: "/images/a.png",
     alt: "Wide twilight shot of the lit lawn set for a wedding, fairy lights",
     headline: "Where Auspicious Beginnings Take Root.",
     subline: "A breathtaking open-air lawn for your grandest celebrations.",
   },
   {
-    image: "/images/hero-2.png",
+    image: "/images/b.png",
     alt: "Grand decorated mandap at the lawn's centre",
     headline: "Grand Weddings Under the Open Sky.",
     subline: "The majestic mandap awaits your sacred vows.",
   },
   {
-    image: "/images/hero-3.png",
+    image: "/images/c.png",
     alt: "Sangeet and reception night with stage and crowd",
     headline: "A Majestic Mandap for Your Sacred Vows.",
     subline: "Sangeet, reception, every celebration made magnificent.",
   },
   {
-    image: "/images/hero-4.png",
+    image: "/images/d.png",
     alt: "Daytime view of the full green lawn and entrance gate",
     headline: "Celebrations of Every Size, Since 2011.",
     subline: "14+ years of making your celebrations unforgettable.",
