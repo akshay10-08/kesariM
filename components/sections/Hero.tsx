@@ -150,10 +150,15 @@ export default function Hero() {
 
           {/* Script Venue Name */}
           <motion.p
-            className="font-script font-bold text-ivory mb-2"
+            className="font-script font-bold mb-2"
             style={{ 
               fontSize: 'clamp(2rem, 4vw, 3.25rem)',
-              textShadow: '0 2px 24px rgba(0,0,0,0.45)' 
+              background: 'linear-gradient(180deg, #F6E27A 0%, #E0A12E 45%, #B8860B 100%)',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              color: 'transparent',
+              textShadow: '0 2px 18px rgba(0,0,0,0.45)',
+              filter: 'drop-shadow(0 1px 1px rgba(0,0,0,0.35))'
             }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -196,7 +201,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            Where <span className="italic text-[#E8B953]" style={{ textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}>Auspicious</span> Beginnings Take Root.
+            Where <span className="italic text-[#E6C77E]" style={{ textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}>Auspicious</span> Beginnings Take Root.
           </motion.h1>
 
           {/* Sub-line (Eyebrow) */}
