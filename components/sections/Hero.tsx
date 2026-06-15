@@ -21,7 +21,7 @@ const slideVariants = {
 };
 
 /* ── Auto-advance interval (ms) ── */
-const INTERVAL = 6000;
+const INTERVAL = 4000;
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
