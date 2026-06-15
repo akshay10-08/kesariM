@@ -135,10 +135,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="relative w-16 h-16 md:w-20 md:h-20 mb-4"
+            className="relative w-24 h-10 md:w-32 md:h-12 mb-4"
           >
             <Image 
-              src="/images/kesari-logo-color.png" 
+              src="/images/loggo.png" 
               alt="Kesari Mangalam Crest" 
               fill 
               className="object-contain" 
@@ -147,7 +147,7 @@ export default function Hero() {
 
           {/* Script Venue Name */}
           <motion.p
-            className="font-script text-3xl md:text-4xl text-gold mb-3"
+            className="font-script text-5xl md:text-6xl lg:text-7xl font-bold text-gold mb-3 drop-shadow-md"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
