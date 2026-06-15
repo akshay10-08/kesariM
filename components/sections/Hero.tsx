@@ -87,12 +87,12 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full h-screen min-h-[600px] overflow-hidden"
+      className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* ═══ Background Slides ═══ */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <motion.div
           key={current}
           variants={slideVariants}
