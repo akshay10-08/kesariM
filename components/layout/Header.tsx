@@ -55,7 +55,7 @@ export default function Header() {
           transition-all duration-500 ease-out
           backdrop-blur-xl backdrop-saturate-150
           shadow-[0_8px_32px_rgba(40,20,10,0.18)]
-          border overflow-hidden
+          border
           ${
             scrolled
               ? 'bg-ivory/90 border-gold/30 shadow-[0_8px_32px_rgba(40,20,10,0.25)]'
@@ -75,7 +75,7 @@ export default function Header() {
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="flex flex-col leading-none group relative w-32 h-12 md:w-44 md:h-16 lg:w-48 lg:h-16"
+            className="flex flex-col leading-none group relative w-32 h-12 md:w-44 md:h-16 lg:w-48 lg:h-16 scale-125 md:scale-150 origin-left"
           >
             <Image 
               src="/images/loggo.png" 
