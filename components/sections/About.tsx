@@ -26,7 +26,7 @@ export default function About() {
               <div className="offset-frame">
                 <div className="relative w-full h-full aspect-[4/5] overflow-hidden">
                   <Image 
-                    src="/images/about-lawn.png" 
+                    src="/images/e.png" 
                     alt="Wide view of the Kesari Mangalam Lawn with lush greenery, fairy lights, and wedding decorations at golden hour" 
                     fill 
                     className="object-cover" 
