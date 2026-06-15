@@ -78,7 +78,7 @@ export default function Header() {
             className="flex flex-col leading-none group relative w-40 h-14 md:w-56 md:h-20 lg:w-64 lg:h-24"
           >
             <Image 
-              src="/images/logoz.png" 
+              src="/images/loggo.png" 
               alt="Kesari Mangalam Lawn Logo" 
               fill 
               className="object-contain object-left"
