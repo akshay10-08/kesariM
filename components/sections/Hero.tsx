@@ -138,15 +138,25 @@ export default function Hero() {
               {SITE.taglineAlt}
             </motion.p>
 
+            {/* Venue Name */}
+            <motion.h2
+              className="font-serif text-3xl sm:text-4xl md:text-5xl text-gold mb-2 tracking-wide font-medium"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              Kesari Mangalam
+            </motion.h2>
+
             {/* Rotating headline */}
             <AnimatePresence mode="wait">
               <motion.h1
                 key={current}
                 className="
                   font-serif font-semibold
-                  text-4xl sm:text-5xl md:text-7xl lg:text-8xl
+                  text-2xl sm:text-3xl md:text-5xl lg:text-6xl
                   text-white
-                  leading-[1.05]
+                  leading-[1.1]
                   mb-6
                 "
                 initial={{ opacity: 0, y: 30 }}
