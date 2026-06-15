@@ -108,7 +108,7 @@ export const WHY_FEATURES = [
 export const SPACES = [
   {
     name: "The Grand Lawn",
-    image: "/images/space-grand-lawn.png",
+    image: "/images/b.png",
     alt: "Sprawling outdoor green lawn set for a grand wedding",
     capacity: "800 seated · 1,000 floating",
     specs: ["Open-air", "Outdoor décor allowed", "Up to ~1,050 guests"],
@@ -117,7 +117,7 @@ export const SPACES = [
   },
   {
     name: "The Mandap",
-    image: "/images/space-mandap.png",
+    image: "/images/f.png",
     alt: "Grand ceremonial mandap setting at the centre of the lawn",
     capacity: "Grand ceremonial setting",
     specs: ["Heart of the lawn", "Majestic setting", "Customisable décor"],
@@ -135,7 +135,7 @@ export const SPACES = [
   },
   {
     name: "Guest Rooms & Bridal Suite",
-    image: "/images/space-guest-rooms.png",
+    image: "/images/g.png",
     alt: "On-site guest rooms and bridal changing room",
     capacity: "On-site accommodation",
     specs: ["Bridal changing room", "Guest accommodation", "Wedding party stay"],
@@ -147,7 +147,7 @@ export const SPACES = [
 export const EVENTS = [
   {
     name: "Weddings",
-    image: "/images/event-wedding.png",
+    image: "/images/a.png",
     alt: "Grand wedding celebration at Kesari Mangalam Lawn",
     description: "Grand celebrations under the open sky, from intimate gatherings to royal large-scale affairs.",
   },
@@ -171,13 +171,13 @@ export const EVENTS = [
   },
   {
     name: "Sangeet & Pre-Wedding",
-    image: "/images/event-sangeet.png",
+    image: "/images/c.png",
     alt: "Sangeet night with DJ and dancing",
     description: "Haldi, mehendi, sangeet — vibrant pre-wedding celebrations with DJ, sound and spectacular lighting.",
   },
   {
     name: "Pre-Nup Photoshoots",
-    image: "/images/event-prenup.png",
+    image: "/images/d.png",
     alt: "Couple photoshoot on the lawn",
     description: "Photoshoot-friendly settings across the lawn — capture your love story in stunning backdrops.",
   },
@@ -187,7 +187,6 @@ export const FACILITIES = [
   { label: "Expansive Outdoor Lawn", icon: "trees" },
   { label: "Grand Ceremonial Mandap", icon: "landmark" },
   { label: "Covered Dining/Banquet", icon: "utensils-crossed" },
-  { label: "In-House Catering", icon: "chef-hat" },
   { label: "Décor & Flowers", icon: "flower-2" },
   { label: "DJ, Sound & Lighting", icon: "music" },
   { label: "Bridal / Changing Room", icon: "sparkles" },
