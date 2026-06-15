@@ -75,10 +75,10 @@ export default function Header() {
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="flex flex-col leading-none group relative w-28 h-10 md:w-36 md:h-12"
+            className="flex flex-col leading-none group relative w-40 h-14 md:w-56 md:h-20 lg:w-64 lg:h-24"
           >
             <Image 
-              src="/images/kesari-logo-color.png" 
+              src="/images/logoz.png" 
               alt="Kesari Mangalam Lawn Logo" 
               fill 
               className="object-contain object-left"
