@@ -150,8 +150,11 @@ export default function Hero() {
 
           {/* Script Venue Name */}
           <motion.p
-            className="font-script text-5xl md:text-6xl lg:text-7xl font-bold text-ivory mb-2"
-            style={{ textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}
+            className="font-script font-bold text-ivory mb-2"
+            style={{ 
+              fontSize: 'clamp(2rem, 4vw, 3.25rem)',
+              textShadow: '0 2px 24px rgba(0,0,0,0.45)' 
+            }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -182,10 +185,10 @@ export default function Hero() {
 
           {/* Headline */}
           <motion.h1
-            className="font-serif text-ivory font-normal mb-6"
+            className="font-serif text-ivory font-normal mb-6 max-w-[680px] mx-auto"
             style={{ 
-              fontSize: 'clamp(2.5rem, 5.5vw, 4.25rem)', 
-              lineHeight: 1.1, 
+              fontSize: 'clamp(2rem, 4.8vw, 3.75rem)', 
+              lineHeight: 1.12, 
               letterSpacing: '-0.01em',
               textShadow: '0 2px 24px rgba(0,0,0,0.45)'
             }}
@@ -196,11 +199,11 @@ export default function Hero() {
             Where <span className="italic text-[#E8B953]" style={{ textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}>Auspicious</span> Beginnings Take Root.
           </motion.h1>
 
-          {/* Sub-line */}
+          {/* Sub-line (Eyebrow) */}
           <motion.p
-            className="font-sans uppercase text-ivory/85 mb-10"
+            className="font-sans uppercase text-ivory/85 mb-8"
             style={{ 
-              fontSize: 'clamp(0.8rem, 1.1vw, 0.95rem)', 
+              fontSize: 'clamp(0.8rem, 1vw, 0.95rem)', 
               letterSpacing: '0.2em',
               textShadow: '0 2px 24px rgba(0,0,0,0.45)'
             }}
