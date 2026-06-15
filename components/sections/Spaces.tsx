@@ -5,6 +5,7 @@
 // Premium cards with image, specs & capacity
 // ═══════════════════════════════════════════
 
+import Image from 'next/image';
 import { Car } from 'lucide-react';
 import { SPACES } from '@/lib/constants';
 import ScrollReveal from '@/components/ui/ScrollReveal';
@@ -28,9 +29,12 @@ export default function Spaces() {
               <div className="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {/* Card image */}
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <div className="image-placeholder absolute inset-0 transition-transform duration-500 group-hover:scale-105">
-                    [IMAGE: {space.image.split('/').pop()} — {space.alt}]
-                  </div>
+                  <Image 
+                    src={space.image} 
+                    alt={space.alt} 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-105" 
+                  />
                   {/* Bottom gradient overlay for readability */}
                   <div
                     className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"

@@ -8,6 +8,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 import { HERO_SLIDES, SITE, EVENT_TYPES, CONTACT } from '@/lib/constants';
 import { buildWhatsAppLink } from '@/lib/whatsapp';
@@ -103,9 +104,13 @@ export default function Hero() {
         >
           {/* Image placeholder with Ken Burns */}
           <div className="absolute inset-0 animate-ken-burns">
-            <div className="image-placeholder absolute inset-0">
-              [IMAGE: {slide.image} — {slide.alt}]
-            </div>
+            <Image 
+              src={slide.image} 
+              alt={slide.alt} 
+              fill 
+              priority={current === 0}
+              className="object-cover" 
+            />
           </div>
 
           {/* Dark gradient overlay */}

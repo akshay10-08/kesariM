@@ -6,6 +6,7 @@
 // ═══════════════════════════════════════════
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Play } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
@@ -29,11 +30,12 @@ export default function VirtualTour() {
             {!isActive ? (
               /* ─── Poster state: image + play button ─── */
               <div className="relative w-full h-full">
-                <div className="image-placeholder absolute inset-0">
-                  [IMAGE: 360-tour-poster.png — Wide aerial/elevated view of
-                  the entire Kesari Mangalam Lawn ready for a wedding event,
-                  used as a poster for the 360° virtual tour]
-                </div>
+                <Image 
+                  src="/images/360-tour-poster.png" 
+                  alt="Wide aerial/elevated view of the entire Kesari Mangalam Lawn ready for a wedding event, used as a poster for the 360° virtual tour" 
+                  fill 
+                  className="object-cover" 
+                />
 
                 {/* Dark overlay for contrast */}
                 <div

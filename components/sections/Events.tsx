@@ -5,6 +5,7 @@
 // 3-column grid with hover effects
 // ═══════════════════════════════════════════
 
+import Image from 'next/image';
 import { EVENTS } from '@/lib/constants';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
@@ -27,9 +28,12 @@ export default function Events() {
               <div className="group bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
                 {/* Card image */}
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <div className="image-placeholder absolute inset-0 transition-transform duration-500 group-hover:scale-105">
-                    [IMAGE: {event.image.split('/').pop()} — {event.alt}]
-                  </div>
+                  <Image 
+                    src={event.image} 
+                    alt={event.alt} 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-105" 
+                  />
                 </div>
 
                 {/* Card body */}

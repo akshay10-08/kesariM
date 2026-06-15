@@ -7,6 +7,7 @@
 // ═══════════════════════════════════════════
 
 import { useState, useMemo, useCallback } from 'react';
+import Image from 'next/image';
 import { GALLERY_IMAGES, GALLERY_CATEGORIES } from '@/lib/constants';
 import ImageMarquee from '@/components/ui/ImageMarquee';
 import Lightbox from '@/components/ui/Lightbox';
@@ -111,9 +112,12 @@ export default function Gallery() {
               aria-label={`View ${img.alt}`}
             >
               <div className="relative w-full h-full overflow-hidden">
-                <div className="image-placeholder absolute inset-0">
-                  [IMAGE: {img.src} — {img.alt}]
-                </div>
+                <Image 
+                  src={img.src} 
+                  alt={img.alt} 
+                  fill 
+                  className="object-cover" 
+                />
               </div>
 
               {/* Hover overlay with category badge */}

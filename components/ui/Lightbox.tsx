@@ -6,6 +6,7 @@
 // ═══════════════════════════════════════════
 
 import { useEffect, useCallback, useRef } from 'react';
+import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -131,9 +132,12 @@ export default function Lightbox({
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative w-full h-[85vh] overflow-hidden rounded-lg">
-              <div className="image-placeholder absolute inset-0">
-                [IMAGE: {current.src} — {current.alt}]
-              </div>
+              <Image 
+                src={current.src} 
+                alt={current.alt} 
+                fill 
+                className="object-contain" 
+              />
             </div>
           </motion.div>
 

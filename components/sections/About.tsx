@@ -5,6 +5,7 @@
 // Asymmetric two-column editorial layout
 // ═══════════════════════════════════════════
 
+import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { ABOUT_TEXT, STATS, CONTACT } from '@/lib/constants';
 import CountUp from '@/components/ui/CountUp';
@@ -23,12 +24,13 @@ export default function About() {
           <ScrollReveal direction="left" className="w-full lg:w-5/12">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="offset-frame">
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <div className="image-placeholder absolute inset-0">
-                    [IMAGE: about-lawn.png — Wide view of the Kesari Mangalam
-                    Lawn with lush greenery, fairy lights, and wedding
-                    decorations at golden hour]
-                  </div>
+                <div className="relative w-full h-full aspect-[4/5] overflow-hidden">
+                  <Image 
+                    src="/images/about-lawn.png" 
+                    alt="Wide view of the Kesari Mangalam Lawn with lush greenery, fairy lights, and wedding decorations at golden hour" 
+                    fill 
+                    className="object-cover" 
+                  />
                 </div>
               </div>
               {/* Decorative gold corner accent */}

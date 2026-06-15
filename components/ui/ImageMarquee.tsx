@@ -6,6 +6,8 @@
 // Duplicated content for seamless looping
 // ═══════════════════════════════════════════
 
+import Image from 'next/image';
+
 interface MarqueeImage {
   src: string;
   alt: string;
@@ -50,9 +52,12 @@ function MarqueeRow({
             key={`${img.src}-${i}`}
             className="relative w-72 md:w-80 aspect-[3/2] flex-shrink-0 rounded-lg overflow-hidden"
           >
-            <div className="image-placeholder absolute inset-0">
-              [IMAGE: {img.src} — {img.alt}]
-            </div>
+            <Image 
+              src={img.src} 
+              alt={img.alt} 
+              fill 
+              className="object-cover" 
+            />
           </div>
         ))}
       </div>
