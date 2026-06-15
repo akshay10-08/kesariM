@@ -232,11 +232,25 @@ export const TESTIMONIALS = [
   },
 ] as const;
 
-export const GALLERY_IMAGES = Array.from({ length: 12 }, (_, i) => ({
-  src: `/images/gallery-${String(i + 1).padStart(2, "0")}.png`,
-  alt: `Kesari Mangalam Lawn — décor, lawn, mandap, food and celebration photo ${i + 1}`,
-  category: (["weddings", "mandap", "lawn", "décor", "food"] as const)[i % 5],
-}));
+export const GALLERY_IMAGES = [
+  { src: "/images/gallery-01.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/gallery-02.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/gallery-03.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/gallery-04.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/gallery-05.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/gallery-06.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/hero-1.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/hero-2.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/hero-3.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/hero-4.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/about-lawn.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/space-grand-lawn.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/space-mandap.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/space-guest-rooms.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/event-wedding.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/event-sangeet.png", alt: "Kesari Mangalam Lawn celebration" },
+  { src: "/images/event-prenup.png", alt: "Kesari Mangalam Lawn celebration" },
+];
 
 export const GALLERY_CATEGORIES = [
   "All",
