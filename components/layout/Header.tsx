@@ -75,7 +75,7 @@ export default function Header() {
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="flex flex-col leading-none group relative w-40 h-14 md:w-56 md:h-20 lg:w-64 lg:h-24"
+            className="flex flex-col leading-none group relative w-32 h-12 md:w-44 md:h-16 lg:w-48 lg:h-16"
           >
             <Image 
               src="/images/loggo.png" 
