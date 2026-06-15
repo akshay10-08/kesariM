@@ -49,66 +49,74 @@ export default function Header() {
       {/* ═══ Desktop / Main Header ═══ */}
       <motion.header
         className={`
-          fixed top-0 left-0 right-0 z-50
-          flex items-center justify-between
-          px-6 lg:px-12
+          fixed top-4 md:top-5 inset-x-4 max-w-[1240px] mx-auto z-50 rounded-full
+          grid grid-cols-2 lg:grid-cols-3 items-center
+          px-6 py-3
           transition-all duration-500 ease-out
+          backdrop-blur-xl backdrop-saturate-150
+          shadow-[0_8px_32px_rgba(40,20,10,0.18)]
+          border overflow-hidden
           ${
             scrolled
-              ? 'bg-maroon/95 backdrop-blur-md border-b py-3'
-              : 'bg-transparent py-5'
+              ? 'bg-ivory/90 border-gold/30 shadow-[0_8px_32px_rgba(40,20,10,0.25)]'
+              : 'bg-white/10 border-white/20'
           }
         `}
-        style={{
-          borderColor: scrolled ? 'var(--gold)' : 'transparent',
-        }}
         /* Fade in on mount */
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+        transition={{ duration: 0.6, ease: 'easeOut', type: 'spring', bounce: 0.2 }}
       >
-        {/* ── Logo ── */}
-        <a
-          href="#home"
-          onClick={(e) => handleNavClick(e, '#home')}
-          className="flex flex-col leading-none group relative w-32 h-12 md:w-40 md:h-16"
-        >
-          <Image 
-            src="/images/kesari-logo-color.png" 
-            alt="Kesari Mangalam Lawn Logo" 
-            fill 
-            className="object-contain object-left"
-            priority
-          />
-        </a>
+        {/* Subtle inner highlight for glass effect */}
+        <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-b from-white/25 to-transparent" aria-hidden="true" />
 
-        {/* ── Desktop nav links ── */}
-        <nav className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+        {/* ── Left: Logo ── */}
+        <div className="relative z-10 flex items-center justify-start">
+          <a
+            href="#home"
+            onClick={(e) => handleNavClick(e, '#home')}
+            className="flex flex-col leading-none group relative w-28 h-10 md:w-36 md:h-12"
+          >
+            <Image 
+              src="/images/kesari-logo-color.png" 
+              alt="Kesari Mangalam Lawn Logo" 
+              fill 
+              className="object-contain object-left"
+              priority
+            />
+          </a>
+        </div>
+
+        {/* ── Center: Desktop Nav ── */}
+        <nav className="relative z-10 hidden lg:flex items-center justify-center gap-6 xl:gap-8" aria-label="Main navigation">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className={`
-                link-underline-grow
-                font-sans text-sm font-medium uppercase tracking-widest
+                relative
+                font-sans text-[11px] xl:text-xs font-semibold uppercase tracking-[0.12em]
                 transition-colors duration-300
-                ${scrolled ? 'text-ivory/90 hover:text-white' : 'text-white/85 hover:text-white'}
+                group
+                ${scrolled ? 'text-charcoal hover:text-saffron' : 'text-ivory hover:text-saffron'}
               `}
             >
               {link.label}
+              {/* Thin gold underline wipe on hover */}
+              <span className="absolute -bottom-1.5 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
 
-        {/* ── Right side: CTA + hamburger ── */}
-        <div className="flex items-center gap-4">
+        {/* ── Right: CTA + Hamburger ── */}
+        <div className="relative z-10 flex items-center justify-end gap-3">
           {/* Enquire — desktop only */}
           <a
             href={buildWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-flex btn-primary text-xs"
+            className="hidden lg:inline-flex rounded-full bg-saffron hover:bg-[#d67a10] text-ivory px-5 py-2.5 text-xs font-semibold uppercase tracking-widest transition-colors shadow-sm"
           >
             Enquire Now
           </a>
@@ -117,7 +125,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
-            className="lg:hidden flex items-center justify-center w-10 h-10 text-white cursor-pointer"
+            className={`lg:hidden flex items-center justify-center w-10 h-10 cursor-pointer transition-colors ${scrolled ? 'text-charcoal' : 'text-ivory'}`}
             aria-label="Open menu"
           >
             <Menu className="w-6 h-6" />
