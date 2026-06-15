@@ -15,7 +15,6 @@ import Marquee from '@/components/sections/Marquee';
 import About from '@/components/sections/About';
 import WhyKesari from '@/components/sections/WhyKesari';
 import Spaces from '@/components/sections/Spaces';
-import VirtualTour from '@/components/sections/VirtualTour';
 import Events from '@/components/sections/Events';
 import Facilities from '@/components/sections/Facilities';
 import Catering from '@/components/sections/Catering';
@@ -45,9 +44,6 @@ export default function Home() {
 
         {/* §5.6 — Spaces: Named venues with capacity specs */}
         <Spaces />
-
-        {/* §5.7 — 360° Virtual Tour: The standout premium feature */}
-        <VirtualTour />
 
         {/* §5.8 — Events: Event-type storytelling cards */}
         <Events />
